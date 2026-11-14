@@ -2,7 +2,7 @@ package com.amigoscode._1_beginners;
 
 /**
  * Exercise: Loops
- *
+ * <p>
  * Learn how to use for, while, and do-while loops to repeat code.
  * Loops are fundamental for iterating over data and performing repetitive tasks.
  */
@@ -12,34 +12,65 @@ public class _5_LoopExercises {
 
         // TODO: 1 - Write a for loop to print numbers 1 to 10
         // Hint: for (int i = 1; i <= 10; i++) { ... }
-
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
 
         // TODO: 2 - Write a while loop to print numbers 10 down to 1 (countdown)
         // Hint: Declare a variable before the loop, use a condition, and decrement inside the loop.
-
+        System.out.println("While loop counting down");
+        int count = 10;
+        while (count > 0) {
+            System.out.println(count);
+            count--;
+        }
 
         // TODO: 3 - Write a do-while loop that runs at least once
         // Print "This runs at least once!" inside the loop.
         // Use a condition that is false so the loop only runs once.
         // Hint: do { ... } while (condition);
-
+        int x = 1;
+        do {
+            System.out.println("This runs at least once inside the loop");
+            x++;
+        } while (x < 3);
 
         // TODO: 4 - Write a for loop to print only even numbers from 1 to 20
         // Hint: Use an if statement with the modulus operator (%) inside the loop,
         //       or increment by 2 starting from 2.
-
+        for (int i = 2; i <= 10; i += 2) {
+            System.out.println(i);
+        }
+        // alternative
+        System.out.println("if statement with the modulus operator (%) ");
+        for (int i = 0; i <= 10; i++) {
+            if (i % 2 != 1) {
+                System.out.println(i);
+            }
+        }
 
         // TODO: 5 - Write a for loop to calculate the factorial of 5 (5! = 120)
         // Declare a variable called factorial and initialize it to 1.
         // Multiply factorial by each number from 1 to 5.
         // Print the result.
-
+        System.out.println("Factrorial");
+        int factorial = 1;
+        for (int i = 1; i <= 5; i++) {
+            factorial *= i;
+            System.out.println(factorial);
+        }
 
         // TODO: 6 - Use an enhanced for loop (for-each) to iterate over a String array
         // Declare a String array called fruits with at least 4 fruit names.
         // Use an enhanced for loop to print each fruit.
-
-
+        System.out.println("Enhanced for loop");
+        String[] fruits = {"Mongo", "Banana", "Apple", "Orange"};
+//        for (int i = 0; i < fruits.length; i++) {
+//            System.out.println(fruits[i]);
+//        }
+        for (String val : fruits) {
+            System.out.println(val);
+        }
         // TODO: 7 - Write a nested for loop to print a 3x3 multiplication table
         // The output should look like:
         //   1  2  3
@@ -47,13 +78,28 @@ public class _5_LoopExercises {
         //   3  6  9
         // Hint: Use System.out.print() for values on the same row,
         //       and System.out.println() to move to the next row.
-
-
+        System.out.println("3x3 multiplication table");
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.print(j * i);
+            }
+            System.out.println();
+        }
         // TODO: 8 - Use break and continue in a loop
         // Write a for loop from 1 to 10:
         //   - Use 'continue' to skip the number 5 (do not print it)
         //   - Use 'break' to stop the loop when you reach 8
         // Print each number that is not skipped.
+        System.out.println();
+        System.out.println("break and continue in a loop");
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5)
+                continue;
+            System.out.println(i);
+            if (i == 8)
+                break;
+
+        }
 
     }
 }
